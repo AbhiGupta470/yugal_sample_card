@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+    
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context.xsd">
+  
+  <bean id="ldt" class="java.time.LocalDateTime" factory-method="now" />
+<!--   Here I have commented the bean code if required is set to false in Spring 4.x versions then there is no requirement for including Date class bean -->
+<!--   but after Spring 5.x this thing is over we need to configure and make ready Date class bean if we want to perform injection on it -->
+  <!-- <bean id="dt" class="java.util.Date" /> --> 
+  <context:component-scan base-package="com.nt.sbeans"/>
+</beans>
