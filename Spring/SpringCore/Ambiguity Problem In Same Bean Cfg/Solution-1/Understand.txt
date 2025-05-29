@@ -1,8 +1,10 @@
-The First approach to solve this problem is by using primary annotation for primary attribute in the bean tag inside
+The First approach to solve this problem is by using @Primary annotation OR primary attribute in the bean tag inside
 xml annotation driven configuration.
 
 - By using primary attribute inside the bean tag or @Primary annotation in the case when the Dependent class is a User Defined class
-<bean id="ldt1" class="java.time.LocalDateTime" factory-method="now"/>
+
+<bean id="ldt1" class="java.time.LocalDateTime" factory-method="now" primary="true"/>
+- The above line will get executed because it contains primary as an attribute which will tell the our ioc container that this beam should be injected
 <bean id="ldt2" class="java.time.LocalDateTime factory-method="of">
 <constructor-arg name="year" value="2002"/>
 <constructor-arg name="month" value="2" />
