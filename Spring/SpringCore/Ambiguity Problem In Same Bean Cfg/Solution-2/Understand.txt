@@ -1,0 +1,14 @@
+the second approach is :
+By matching one of the dependent spring bean id with target class @Autowired HAS-A property name [ performs "ByName" mode of autowiring ]
+=> As the title indicates that we need to give the name of the bean id as same as that of the HAS-A propery name to solve the ambiguity problem
+=> This method also uses "ByName" mode of autowiring 
+=> In applicationContext.xml
+    <bean id="dateTime" class="java.time.LocalDateTime" factory-method="now" />
+    
+    <bean id="ldt1" class="java.time.LocalDateTime" factory-method="of">
+    <constructor-arg name="year" value="2002" />
+    <constructor-arg name="month" value="2" />
+    <constructor-arg name="dayOfMonth" value="24" />
+    <constructor-arg name="hour" value="16" />
+    <constructor-arg name="minute" value="30" />
+    </bean>
