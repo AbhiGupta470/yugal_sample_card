@@ -1,0 +1,2 @@
+This file is used to understand that what happens when we call getBean method onto IOC Container to get a object of Spring Bean class
+And how we are not responsible for creating the object and returning it.
