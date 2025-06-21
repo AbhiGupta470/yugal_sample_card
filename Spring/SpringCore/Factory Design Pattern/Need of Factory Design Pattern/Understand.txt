@@ -4,3 +4,7 @@ And how we are not responsible for creating the object and returning it.
 
 Why do we have created Person class as an abstract class but not an interface as we know in Factory Design Pattern we can use inerfaces also in the place or in the area where we are using parent or super class ?
 Ans: Normally the purpose of going for a abstract parent class ( like as Person.java ) is because when we want to declare properties of the class and also want to use constructor then in that case we prefer abstract class otherwise we can go for interface.
+
+
+Why do we use super.toString() method inside Overridden method of Sub classes (Employee.java) ?
+super.toString() will call the toString() method present inside the super class (Person.java) and whatever the code will be written inside it will be executed.
